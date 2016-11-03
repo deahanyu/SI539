@@ -51,10 +51,10 @@ For all pages header
 
 .headerNav li a:hover{
 	box-sizing: border-box;
-    background-color: #D3D3D3;
+    background-color: lightgrey;
 }
 #indexBody li#index a, #cvBody li#cv a,#inspirationBody li#inspiration a,#foodPhotoBody li#foodPhoto a,#contactBody li#contact a{ 	box-sizing: border-box;
-    background-color: #D3D3D3; }
+    background-color: lightgrey; }
 
 
 /* --------------------------------------------------------------
@@ -104,6 +104,9 @@ Media Queries          *****TABLET*****
 	padding-top: 44px; 
 	font-size: 2.5em;
 	}
+	.onlyForPhone{
+		display: none;
+	}
 	.dropdown{
 		display:none;
 	}
@@ -147,9 +150,6 @@ Media Queries          *****DESKTOP*****
 	padding-top: 60px; 
 	font-size: 2.8em;
 	}
-	.dropdown{
-		display:none;
-	}
 
 /* --------------------------------------------------------------
 MEDIA COMPUTER SIZE header
@@ -157,19 +157,10 @@ MEDIA COMPUTER SIZE header
 	.headerBox{
 		height:250px;
 	}
-	.headerNav{
-    overflow: hidden;
-	}
-
-	.headerNav li {
-	display: inline-block;
-	}
-
 	.headerNav li a {
   	line-height: 55px; 
   	font-size: 1.2em;
 	}
-
 /* --------------------------------------------------------------
 MEDIA COMPUTER SIZE footer 
 -------------------------------------------------------------- */
@@ -198,6 +189,9 @@ Media Queries          *****Only Phone*****
 ====================================================
 ================================================================ */
 @media screen and (max-width: 767px) {
+	.onlyforPhone{
+		display:block;
+	}
 	.dropdownBox {
 	display:block;
     width:100%;
@@ -264,17 +258,14 @@ cv page
 /* --------------------------------------------------------------
 cv page section or content
 -------------------------------------------------------------- */
-section{
-	    display:table-cell;
-    	margin:0 auto;
-}
+
 #cvA{
-	background-color: green;
+	background-color: white;
 	border: 3px solid black;
 
 }
 #cvB{
-	background-color: blue;
+	background-color: white;
 	border: 3px solid black;
 }
 /* ===============================================================
@@ -283,6 +274,8 @@ inspiration page
 /* --------------------------------------------------------------
 inspiration page section or content
 -------------------------------------------------------------- */
+
+
 /* ===============================================================
 photo page
 ================================================================ */
