@@ -7,36 +7,30 @@ For all pages
 body{
 	margin:30px;
 	font-family: serif,Courier,Helvetica;
-
 }
-.bodyBox{
 
+h1{
+	text-align: center;
+	padding-top: 30px; 
+	padding-bottom:10px;
+	font-size: 1.5em;  
 }
 /* --------------------------------------------------------------
 For all pages header 
 -------------------------------------------------------------- */
 .headerBox{
-	
-	background: #B0C4DE;	/*background-image : url('../images/header/sky.jpg');*/
 	border-radius: 15px;
-	height:150px;
+	height:126px;
 	margin-bottom: 10px;
 	background-image : url('../images/header/sky.jpg');
-	
-}
-
-h1{
-	text-align: center;
-	padding-top: 50px; 
-	font-size: 1.5em;  
 }
 
 .headerNav{
 	list-style-type: none;
 	height: 22%;
     margin: 0;
-    padding: 2px;
-    background: #B0C4DE; /*#778899;*/
+    padding: 0px;
+    background: #B0C4DE; 
     text-align: center;
 }
 
@@ -45,27 +39,23 @@ h1{
     height:100%;
     text-align: center;
 }
-	
+
 .headerNav li a {
     color: black;
     text-decoration: none;
     display: inline-block;
     width: 100%;
     height:100%;
-    font-size: 1.2em;
-    /*vertical-align: middle;*/
+    
 }
 
 .headerNav li a:hover{
 	box-sizing: border-box;
     background-color: #D3D3D3;
 }
+#indexBody li#index a, #cvBody li#cv a,#inspirationBody li#inspiration a,#foodPhotoBody li#foodPhoto a,#contactBody li#contact a{ 	box-sizing: border-box;
+    background-color: #D3D3D3; }
 
-
-/*
-li a:active {
-	background-color: #B6B6B6;
-}*/
 
 /* --------------------------------------------------------------
 For all pages footer 
@@ -84,6 +74,7 @@ For all pages footer
     padding-top:6px;
     text-align: center;
 }
+
 .footerBox li {
 	display: inline-block;
 	padding: 0px 20px;
@@ -92,87 +83,91 @@ small {
     display: block;
     text-align: center;
 }
+
+
+
+
 /* ===============================================================
 Media Queries
 ================================================================ */
-/*
-phone ~ 770 ~  Tablet  ~ 990 ~ computer
-*/
-/*Starting as a device width*/
-/* THIS IS ONLY FOR H1 FONT */
-/*@media screen and (max-width:361px) {
-	I want to fix    -->   DEAHANY
-	                          U 
-}*/
-
 /* ===============================================================
-Media Queries TABLET SIZE
+====================================================
+====================================================
+Media Queries          *****TABLET*****
+====================================================
+====================================================
 ================================================================ */
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
 	body{background-color:yellow;}
 	h1{
-	padding-top: 51px; 
+	padding-top: 44px; 
 	font-size: 2.5em;
 	}
-
+	.dropdown{
+		display:none;
+	}
 /* --------------------------------------------------------------
-MEDIA COMPUTER SIZE header
+MEDIA Tablet SIZE header
 -------------------------------------------------------------- */
+	
 	.headerBox{
 	height:200px;
 	}
+	.headerNav{
+ 	overflow: hidden;
+	}
+
+	.headerNav li {
+	display: inline-block;   
+	}
+
+	.headerNav li a {
+    line-height: 44px; 
+    font-size: 1em;
+	}
 }
 
+
+
+
 /* ===============================================================
-Media Queries COMPUTER SIZE
+====================================================
+====================================================
+Media Queries          *****DESKTOP*****
+====================================================
+====================================================
 ================================================================ */
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
+
 	body{background-color:blue;}
 
-
 	h1{
-	padding-top: 45px; 
+	padding-top: 60px; 
 	font-size: 2.8em;
+	}
+	.dropdown{
+		display:none;
 	}
 
 /* --------------------------------------------------------------
 MEDIA COMPUTER SIZE header
 -------------------------------------------------------------- */
 	.headerBox{
-		height:200px;
+		height:250px;
 	}
 	.headerNav{
-	list-style-type: none;
-	height: 22%;
-    margin: 0;
-    padding: 2px;
     overflow: hidden;
-    background: #B0C4DE; /*#778899;*/
-    text-align: center;
 	}
 
 	.headerNav li {
 	display: inline-block;
-    width: 18%;
-    height:100%;
-    text-align: center;
 	}
 
 	.headerNav li a {
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    height:100%;
-    font-size: 1.2em;
-    /*vertical-align: middle;*/
-	}
-
-	.headerNav li a:hover{
-	box-sizing: border-box;
-    background-color: #D3D3D3;
+  	line-height: 55px; 
+  	font-size: 1.2em;
 	}
 
 /* --------------------------------------------------------------
@@ -180,15 +175,13 @@ MEDIA COMPUTER SIZE footer
 -------------------------------------------------------------- */
 	.footerNav{
 	display:inline-block;
-	list-style-type: none;
 	float:left;
-	margin: 0 auto ;
 	padding:12px 0px 0px 60px;
-   text-align: right;
+   	text-align: right;
+
 	}
 	.footerBox li {
-	display: inline-block;
-	padding-left: 8px;
+	padding: 0px 0px 0px 16px;
 	}
 small{
 	font-size: 1em;
@@ -197,7 +190,54 @@ small{
 	}
 
 }
+/* ===============================================================
+====================================================
+====================================================
+Media Queries          *****Only Phone*****
+====================================================
+====================================================
+================================================================ */
+@media screen and (max-width: 767px) {
+	.dropdownBox {
+	display:block;
+    width:100%;
+	}
+	.dropdown {
+    background-color: #B0C4DE;
+  	border-radius: 0px 0px 15px 15px;
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    opacity:0.5;
+    font-family:serif,Courier,Helvetica;
+	}
+	.headerNav {
+    display: none;
+	height: 22%;
+    margin: 0;
+    padding: 0px;
+    background: #B0C4DE; 
+    text-align: center;
+    opacity:0.9;
+	}
+.headerNav li {
+    width: 100%;
+}
+.headerNav li a {
+    padding: 11.5px 16px;
 
+}
+.dropdownBox:hover .headerNav {
+	box-sizing: border-box;
+    display: block;
+}
+
+.dropdownBox:hover .dropdown {
+    background-color: transparent;
+}
+}
 
 /* ===============================================================
 Index page
