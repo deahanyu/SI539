@@ -15,6 +15,13 @@ h1{
 	padding-bottom:10px;
 	font-size: 1.5em;  
 }
+h2{
+	text-align: center;
+	font-size: 1.2em;
+}
+h3{
+	display: none;
+}
 /* --------------------------------------------------------------
 For all pages header 
 -------------------------------------------------------------- */
@@ -53,7 +60,7 @@ For all pages header
 	box-sizing: border-box;
     background-color: lightgrey;
 }
-#indexBody li#index a, #cvBody li#cv a,#inspirationBody li#inspiration a,#foodPhotoBody li#foodPhoto a,#contactBody li#contact a{ 	box-sizing: border-box;
+#indexBody li#index a,#cvBody li#cv a,#inspirationBody li#inspiration a,#photoBody li#photo a,#formBody li#form a{ 	box-sizing: border-box;
     background-color: lightgrey; }
 
 
@@ -86,101 +93,118 @@ small {
 
 
 
-
 /* ===============================================================
-Media Queries
+Index page
 ================================================================ */
-/* ===============================================================
-====================================================
-====================================================
-Media Queries          *****TABLET*****
-====================================================
-====================================================
-================================================================ */
+/* --------------------------------------------------------------
+Index page section or content
+-------------------------------------------------------------- */
+section{
+	    display:table-cell;
+    	margin:0 auto;
+}
 
-@media screen and (min-width: 768px) {
-	body{background-color:yellow;}
-	h1{
-	padding-top: 44px; 
-	font-size: 2.5em;
-	}
-	.onlyForPhone{
-		display: none;
-	}
-	.dropdown{
+#indexA{
+	display:none;
+}
+#indexB{
+	
+	padding:5%;
+}
+/* ===============================================================
+cv page
+================================================================ */
+/* --------------------------------------------------------------
+cv page section or content
+-------------------------------------------------------------- */
+#cvBox{
+	border:1px solid;
+}
+#cvA{
 		display:none;
 	}
-/* --------------------------------------------------------------
-MEDIA Tablet SIZE header
--------------------------------------------------------------- */
-	
-	.headerBox{
-	height:200px;
-	}
-	.headerNav{
- 	overflow: hidden;
+#cvB{
+		text-align: center;
+			padding:5%;
 	}
 
-	.headerNav li {
-	display: inline-block;   
+#education{
+		display:none;
 	}
-
-	.headerNav li a {
-    line-height: 44px; 
-    font-size: 1em;
-	}
-}
-
-
-
 
 /* ===============================================================
-====================================================
-====================================================
-Media Queries          *****DESKTOP*****
-====================================================
-====================================================
+inspiration page
 ================================================================ */
-
-@media screen and (min-width: 1024px) {
-
-	body{background-color:blue;}
-
-	h1{
-	padding-top: 60px; 
-	font-size: 2.8em;
-	}
-
 /* --------------------------------------------------------------
-MEDIA COMPUTER SIZE header
+inspiration page section or content
 -------------------------------------------------------------- */
-	.headerBox{
-		height:250px;
+
+#inspirationAForTb{
+		display:none;
 	}
-	.headerNav li a {
-  	line-height: 55px; 
-  	font-size: 1.2em;
+#inspirationAForPc{
+		display:none;
 	}
+#inspirationB{
+		text-align: center;
+		padding-top: 15px;
+	}
+
+/* ===============================================================
+photo page
+================================================================ */
 /* --------------------------------------------------------------
-MEDIA COMPUTER SIZE footer 
+photo page section or content
 -------------------------------------------------------------- */
-	.footerNav{
-	display:inline-block;
-	float:left;
-	padding:12px 0px 0px 60px;
-   	text-align: right;
-
-	}
-	.footerBox li {
-	padding: 0px 0px 0px 16px;
-	}
-small{
-	font-size: 1em;
-	float:right;
-	padding:24px 60px;
-	}
-
+#photoBox{
+	background:#F7E5F5;
 }
+#photoA{
+    display:none;
+  }
+#photoB{
+    padding-left:10px;
+  } 
+
+.img{
+	display:inline-block;
+	overflow: hidden;
+    width:77px;
+    height:77px;
+    padding:2px;
+}
+div.img:hover {
+    border: 1px solid lightgrey;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+/* ===============================================================
+Contact page
+================================================================ */
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 10px;
+}
+
+#formB{
+	margin: 0 auto;
+	background-color:#F7E5F5;
+	width: 9999px;
+}
+table{
+	    margin-left:auto; 
+    	margin-right:auto;
+}
+
+
 /* ===============================================================
 ====================================================
 ====================================================
@@ -233,81 +257,224 @@ Media Queries          *****Only Phone*****
 }
 }
 
-/* ===============================================================
-Index page
-================================================================ */
-/* --------------------------------------------------------------
-Index page section or content
--------------------------------------------------------------- */
-section{
-	    display:table-cell;
-    	margin:0 auto;
-}
-#indexA{
-	background-color: green;
-	border: 3px solid black;
-
-}
-#indexB{
-	background-color: blue;
-	border: 3px solid black;
-}
-/* ===============================================================
-cv page
-================================================================ */
-/* --------------------------------------------------------------
-cv page section or content
--------------------------------------------------------------- */
-
-#cvA{
-	background-color: white;
-	border: 3px solid black;
-
-}
-#cvB{
-	background-color: white;
-	border: 3px solid black;
-}
-/* ===============================================================
-inspiration page
-================================================================ */
-/* --------------------------------------------------------------
-inspiration page section or content
--------------------------------------------------------------- */
-
 
 /* ===============================================================
-photo page
+Media Queries
 ================================================================ */
+/* ===============================================================
+====================================================
+====================================================
+Media Queries          *****TABLET*****
+====================================================
+====================================================
+================================================================ */
+
+@media screen and (min-width: 768px) {
+	h1{
+	padding-top: 44px; 
+	font-size: 2.5em;
+	}
+	h2{
+		font-size: 1.5em;
+	}
+	.onlyForPhone{
+		display: none;
+	}
+	.dropdown{
+		display:none;
+	}
 /* --------------------------------------------------------------
-photo page section or content
+MEDIA Tablet SIZE header
 -------------------------------------------------------------- */
-#photoA{
+	
+	.headerBox{
+	height:200px;
+	}
+	.headerNav{
+ 	overflow: hidden;
+	}
+
+	.headerNav li {
+	display: inline-block;   
+	}
+
+	.headerNav li a {
+    line-height: 44px; 
+    font-size: 1em;
+	}
+/* --------------------------------------------------------------
+MEDIA Tablet SIZE cvcvcv
+-------------------------------------------------------------- */
+	#indexBox{
+		display:table;
+		}
+	#indexA{
+			display:table-cell;
+			background-image : url('../images/contents/me.jpg');
+			width:512px; /*Change*/
+		}
+
+/* --------------------------------------------------------------
+MEDIA Tablet SIZE cvcvcv
+-------------------------------------------------------------- */
+	#cvBox{
+		border: 3px solid; 
+		}
+	#cvA{
+			display:block;
+			width:100%;
+			height: 200px;
+			background-image : url('../images/contents/cvbg.jpeg');
+			border-bottom: 3px solid;
+		}
+	#cvB{
+		
+		text-align: left;
+	
+		}
+	#personalData{
+		columns:2;
+		}
+	#education{
+		display: block;
+		columns: 4;
+		}
+/* --------------------------------------------------------------
+MEDIA Tablet SIZE inspiration
+-------------------------------------------------------------- */
+		#inspirationBox{
+		background-image : url('../images/contents/inspirationbgtb.jpg');
+
+		}
+		#inspirationAForTb{
+			display:block;
+			overflow: hidden;
+		}
+		#inspirationAForPc{
+			display:none;
+		}
+/* --------------------------------------------------------------
+MEDIA Tablet SIZE photo & Form
+-------------------------------------------------------------- */
+	#formB,#photoBox{
+	background-color:#D1EDD0;
+	}	
+	.img{
+        width:100px;
+        height:100px;
+        padding:4px;
+    }
+
+
+
 
 }
-#photoB{
 
-}
-#imgBox {
 
-}
-#img{
+
+
+/* ===============================================================
+====================================================
+====================================================
+Media Queries          *****DESKTOP*****
+====================================================
+====================================================
+================================================================ */
+
+@media screen and (min-width: 1024px) {
+
+
+	h1{
+	padding-top: 60px; 
+	font-size: 2.8em;
+	}
+	h2{
+		font-size: 1.8em;
+	}
+
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE header
+-------------------------------------------------------------- */
+	.headerBox{
+		height:250px;
+	}
+	.headerNav li a {
+  	line-height: 55px; 
+  	font-size: 1.2em;
+	}
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE footer 
+-------------------------------------------------------------- */
+	.footerNav{
 	display:inline-block;
-	overflow: hidden;
-    object-fit: cover;
-    width:100px;
-    height:100px;
-    float:left;
-    padding:5px;
-}
-div.img:hover {
-    border: 1px solid #777;
-}
+	float:left;
+	padding:12px 0px 0px 60px;
+   	text-align: right;
 
-div.img img {
-    width: 100%;
-    height: auto;
+	}
+	.footerBox li {
+	padding: 0px 0px 0px 16px;
+	}
+small{
+	font-size: 1em;
+	float:right;
+	padding:24px 60px;
+	}
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE Index
+-------------------------------------------------------------- */
+	#indexBox{
+		display: block;
+	}
+	#indexA{
+			display:block;
+			width:100%;
+			height: 200px;
+			background-image : url('../images/contents/pirates.jpg');	
+		}
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE CVCV
+-------------------------------------------------------------- */
+	
+	#cvBox{
+		display:table;
+		}
+	#cvA{
+			display:table-cell;
+		}
+	#education{
+		display: none;
+	}
+	.onlyForPhone{
+		display: table-cell;
+	}
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE inspiration 
+-------------------------------------------------------------- */
+	#inspirationBox{
+			display: table;
+		}
+
+	#inspirationAForTb{
+			display:none;
+		}
+	#inspirationAForPc{
+			display:table-cell;
+		}
+	#inspirationB{
+			vertical-align: middle;
+		}
+/* --------------------------------------------------------------
+MEDIA COMPUTER SIZE photo & Form
+-------------------------------------------------------------- */
+	#formB,#photoBox{
+	background-color: #e2e6f7;
+
+	}	
+	.img{
+        width:200px;
+        height:200px;
+    }
+
+
 }
-/* ===============================================================
-Contact page
-================================================================ */
