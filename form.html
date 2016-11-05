@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Deahan Yu</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheets.css"/>
-	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<meta name="viewport" content="width=device-width">
 	<script>
 	function validate()
 		{
@@ -32,156 +32,110 @@
 		return true;
 	}
 	</script>
-<style>
-/*	this goes inside of form PAGE */
-td .forminfo{
-	vertical-align:middle;
-	font-size:14px;
-	height:30px;
-}
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
-#formA{
-	display: none;
-}
-#formB{
-	margin: 0 auto;
-	background-color: #e2e6f7;
-	width: 9999px;
-}
-table{
-
-}
-/*  media QUEREIES~!!!! */
-
-	@media screen and (min-width: 768px) {
-
-
-	}
-	@media screen and (min-width: 1024px) {
-
-	}
-	</style>
 </head>
-
-
-
 <body>
-
-
-
+	
+<div id="formBody"><!-- ******************* -->
 	<header>
-
-	</header>
-
-
-
-	<div id="formBox"> <!-- ******************* -->
-	<section id="formA"><!-- ******************* -->
-		<div class="">
-		<p>AAA</p>	
+		<div class="headerBox">
+		<h1>D E A H A N Y U</h1>
+			<div class="dropdownBox">
+			<button class="dropdown">Menu</button>
+			<ul class="headerNav">
+				<li id="index"><a href="index.html">Home</a></li>
+				<li id="cv"><a href="cv.html">CV</a></li>
+				<li id="inspiration"><a href="inspiration.html">Inspiration</a></li>
+				<li id="photo"><a href="photo.html">Photos</a></li>
+				<li id="form"><a href="form.html">Survey &amp; Contact</a></li>
+			</ul>
+			</div>
 		</div>
-	</section>
+	</header>
+	<div id="formBox"> <!-- ******************* -->
+		<section id="formB"><!-- ******************* -->
+		<br>
+		<form name="contact" action =# method = "post" onSubmit = "return validate();">
+		<h2>Please provide the following information</h2>
+		<table>
 
-	<section id="formB"><!-- ******************* -->
-	<table>
-	<form name="contact" action =# method = "post" onSubmit = "return validate();">
+		<tr>
+		<td>First Name:</td>
+		<td><input type="text" size = "30" name = "firstname"></td>
+		</tr>
 
-	<tr>
-	<td height="50" colspan="2" align="center" valign="top" class="forminfo"><b>Please provide the following information:</b><br></td>
-	</tr>
+		<tr>
+		<td>Last Name:</td>
+		<td><input type="text" size = "30" name="lastname"></td>
+		</tr>
+		
+		<tr> 
+		<td>Email Address:</td>
+		<td><input type="text" size = "40" name="email"></td>
+		</tr>
+		
+		<tr>
+		<td>Phone:</td>
+		<td><input type="text" name="phone" maxlength="15" /></td>
+		</tr>
+		
+		<tr>
+		<td><br>Why are you contacting me?</td>
+		<td>
+		<br>
+		<input type="checkbox" name = "choice" value="Drink"/> : Personal question <br>
+		<input type="checkbox" name = "choice" value="Dinner" /> : Academic question<br>
+		<input type="checkbox" name = "choice" value="Rest" /> : General question<br>
+		<input type="checkbox" name = "choice" value="Anotherday" /> : Just saying Hi<br>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><br>What type of food do you like? </td>
+		<td><br>
+		<input type="radio" name = "Type" value="Type" /> : American <br>
+		<input type="radio" name = "Type" value="Type" /> : Asian <br>
+		<input type="radio" name = "Type" value="Type" /> : Mexican <br>
+		<input type="radio" name = "Type" value="Type" /> : All <br>
+		</td>
+		</tr>
 
-	<tr>
-	<td width="40%" class="forminfo">First Name:</td>
-	<td width="60%" class="forminfo"><input type="text" size = "30" name = "firstname"></td>
-	</tr>
+		<tr>
+		<td><br>What is your degree?</td>
+		<td><br>
+		<select name = "referral_code" size="1">
+		<option value="NULL">Please select an option</option>
+		<option value = "none">None</option>
+		<option value = "Highschool">High school diploma</option>
+		<option value = "B.S.">Bachelor's Degree or similar</option>
+		<option value = "M.S.">Master's Degree</option>
+		<option value = "Ph.D.">Ph.D</option>
+		</select></td>
+	 	</tr> 
+		  
+		<tr>
+		<td colspan = "2"><br/>Any comments:</td>
+		</tr>
 
-	<tr>
-	<td class="forminfo">Last Name:</td>
-	<td class="forminfo"><input type="text" size = "30" name="lastname"></td>
-	</tr>
-	
-	<tr> 
-	<td class="forminfo">Email Address:</td>
-	<td valign="top" class="forminfo"><input type="text" size = "40" name="email"></td>
-	</tr>
-	
-	<tr>
-	<td class="forminfo">Phone:</td>
-	<td class="forminfo"><input type="text" name="phone" maxlength="15" /></td>
-	</tr>
-	
-	<tr>
-	<td height="84" id = "topalign" class="forminfo"><br>Why are you contacting me?</td>
-	<td align = "left" valign ="middle" class="forminfo">
-	<br>
-	<input type="checkbox" name = "choice" value="Drink"/> : Personal question <br>
-	<input type="checkbox" name = "choice" value="Dinner" /> : Academic question<br>
-	<input type="checkbox" name = "choice" value="Rest" /> : General question<br>
-	<input type="checkbox" name = "choice" value="Anotherday" /> : Just saying Hi<br>
-	</td>
-	</tr>
-	
-	<tr>
-	<td height="63" id = "topalign" class="forminfo"><br/>What type of food do you like? </td>
-	<td align = "left" valign = "middle" class="forminfo"><br/>
-	<input type="radio" name = "Type" value="Type" /> : American <br/>
-	<input type="radio" name = "Type" value="Type" /> : Asian <br/>
-	<input type="radio" name = "Type" value="Type" /> : Mexican <br/>
-	<input type="radio" name = "Type" value="Type" /> : All <br/>
-	</td>
-	</tr>
+		<tr>
+		<td colspan = "2"> 
+		<textarea wrap="hard" rows="5" cols="45" ></textarea></td>
+		</tr>
+	            
+		<tr>     
+		<td colspan = "2">                        
+		<input type="submit" value="Submit" name = "submit"></td>                      
+		</tr>
 
-	<tr>
-	<td class="forminfo"><br/>What is your degree?</td>
-	<td class="forminfo"><br/>
-	<select name = "referral_code" size="1">
-	<option value="NULL">Please select an option</option>
-	<option value = "special">None</option>
-	<option value = "rarely">High school diploma</option>
-	<option value = "sometimes">Bachelor's Degree or similar</option>
-	<option value = "regularly">Master's Degree</option>
-	<option value = "special">Ph.D</option>
-	</select></td>
- 	</tr> 
-	  
-	<tr>
-	<td height="30" colspan="2" valign="top" class="forminfo" maxlength="10"><br/>Any comments:</td>
-	</tr>
+		<tr>
+		<td><input type= "reset" /><br></td>
+		<td><a href="mailto:deahanyu@umich.edu">Contact me</a></td>
+		</tr>
 
-	<tr>
-	<td height="85" colspan="2" align = "left" valign="top" class="forminfo"> 
-	<textarea id="comments" wrap="hard" rows="5" cols="45" align = "left"></textarea></td>
-	</tr>
-            
-	<tr>     
-	<td height="26" colspan="2" valign="top" class="forminfo">                        
-	<input type="submit" value="Submit" name = "submit"></td>                      
-	</tr>
-
-	<tr>
-	<td height="30" colspan="2" valign="top" class="forminfo">
-	<input type= "reset" /><br/></td>
-	</tr>
-	<tr>
-	<td><a href="mailto:deahany@andrew.cmu.edu">Contact me</a></td>
-	</tr>
-
-
-	</form>
-	</table>
-	</section>
-</div>
-
-
+		</table>
+		</form>
+		
+		</section>
+	</div>
 	<footer>
 		<div class="footerBox">
 	        <ul class="footerNav">
@@ -192,6 +146,6 @@ table{
 	        <small>Copyright 2016 Yu</small>
       	</div>
 	</footer>
-
+</div>
 </body>
 </html>
