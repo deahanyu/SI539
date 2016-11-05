@@ -1,73 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Deahan Yu</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheets.css"/>
-	<meta name="viewport" content="width=device-width" initial-scale="1">
-	<style>
-/*	this goes inside of cv PAGE */
-
-	#cvA{
-		display:none;
-	}
-	#cvB{
-		text-align: center;
-	}
-
-	#education{
-		display:none;
-	}
-
-/*  media QUEREIES~!!!! */
-
-	@media screen and (min-width: 768px) {
-		#cvBox{
-		background-image : url('assets/images/contents/cvbg.jpeg');
-		/*background-image : url('../images/contents/cvsuperman.jpeg');*/
-
-		}
-		#cvA{
-			display:block;
-			width:100%;
-			height: 200px;
-			background: transparent;
-		}
-		#cvB{
-			text-align: left;
-		}
-		#personalData{
-		columns:2;
-		}
-		#education{
-		display: block;
-		columns: 4;
-		}
-
-
-	}
-	@media screen and (min-width: 1024px) {
-		#cvA{
-
-		}
-
-	}
-	</style>
+	<meta name="viewport" content="width=device-width">
 
 </head>
 <body>
-	<div>
-
+	
+<div id="cvBody"><!-- ******************* -->
 	<header>
+		<div class="headerBox">
+		<h1>D E A H A N Y U</h1>
+			<div class="dropdownBox">
+			<button class="dropdown">Menu</button>
+			<ul class="headerNav">
+				<li id="index"><a href="index.html">Home</a></li>
+				<li id="cv"><a href="cv.html">CV</a></li>
+				<li id="inspiration"><a href="inspiration.html">Inspiration</a></li>
+				<li id="photo"><a href="photo.html">Photos</a></li>
+				<li id="form"><a href="form.html">Survey &amp; Contact</a></li>
+			</ul>
+			</div>
+		</div>
+	</header>
 
-		<h1>DEAHAN YU</h1>
-
-	</header>	
 	<div id = "cvBox">
+	
 	<section id="cvA">
+	<h3>NULL</h3>
 	</section>
 
 	<section id="cvB">
+		<h2>Curriculum Vitae</h2>
 		<b>PERSONAL DATA</b>
 		<div id="personalData">	
 			<div>
@@ -134,10 +100,18 @@
 			<i>Squad Leader/Military Administrator</i>, Administration, 8th Army KTA Training Academy, Uijeong-Bu, South Korea. Participated in staff meeting to discuss current issues and plans for Administration. Managed soldiers’ leaves, monthly paychecks, and promotions. Supervised duties and living. Volunteered public service for taking care of children and seniors from underprivileged families.<br>
 			</div>
 		</div>
-
 	</section>
 	</div>
-
-	</div>
+	<footer>
+		<div class="footerBox">
+	        <ul class="footerNav">
+	          <li><a href="https://www.instagram.com/yudh90"><img src="assets/images/footer/instagram.png" alt="instagram"></a></li>
+	          <li><a href="https://www.facebook.com/dae.yu"><img src="assets/images/footer/facebook.png" alt="facebook"></a></li>
+	          <li><a href="https://www.linkedin.com/in/deahan-yu-893497a2"><img src="assets/images/footer/linkedin.png" alt="linkedin"></a></li>
+	        </ul>
+	        <small>Copyright 2016 Yu</small>
+      	</div>
+	</footer>
+</div>
 </body>
 </html>

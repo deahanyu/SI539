@@ -4,45 +4,38 @@
 	<meta charset="UTF-8">
 	<title>Deahan Yu</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheets.css"/>
-	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<meta name="viewport" content="width=device-width">
 	<script>
-		function check(input){
-			if (input.value != document.getElementById('email_add').value){
-				input.className="error";
-				alert("Must Match!!");
-			}
+	function validate()
+		{
+		if (document.contact.firstname.value.length < 2 || document.contact.lastname.value.length < 2 ) 
+
+		{
+		alert("Please enter your whole name.");
+		return false;		
 		}
+
+		if (document.contact.email.value.length < 6 ) 
+		{
+
+		alert("Please enter a valid email address.");
+		return false;		
+		}
+
+		if (document.contact.phone.value.length < 7 ) 
+		{
+
+		alert("Please enter your phone number.");
+		return false;		
+		}
+		
+		return true;
+	}
 	</script>
-<style>
-/*	this goes inside of form PAGE */
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
-#formA{
-	display: none;
-}
-/*  media QUEREIES~!!!! */
-
-	@media screen and (min-width: 768px) {
-
-
-	}
-	@media screen and (min-width: 1024px) {
-
-	}
-	</style>
 </head>
 <body>
 	
-	<div id="formBody"> <!-- ******************* -->
+<div id="formBody"><!-- ******************* -->
 	<header>
 		<div class="headerBox">
 		<h1>D E A H A N Y U</h1>
@@ -52,39 +45,97 @@ textarea {
 				<li id="index"><a href="index.html">Home</a></li>
 				<li id="cv"><a href="cv.html">CV</a></li>
 				<li id="inspiration"><a href="inspiration.html">Inspiration</a></li>
-				<li id="foodPhoto"><a href="foodphoto.html">Food Photo</a></li>
-				<li id="contact"><a href="contact.html">Contact</a></li>
+				<li id="photo"><a href="photo.html">Photos</a></li>
+				<li id="form"><a href="form.html">Survey &amp; Contact</a></li>
 			</ul>
 			</div>
 		</div>
 	</header>
-
-	<section id="formA"><!-- ******************* -->
-		<div class="">
-		<p>AAA</p>	
-		</div>
-	</section>
-
-	<section id="formB"><!-- ******************* -->
-
-		<div>
-		<form action="#" method="post">
-		<fieldset>
-     	<label for="name">Name:</label>
-     	<input type="text" id="name"><br>
-		<label for="email">Email:</label>
-		<input type="email" id="email_add" name="email_add" required><br>
-		<label for="email">Confirm email:</label>
-		<input type="email" id="email_add" name="email_add_confir" required onchange="check(this)"><br>
+	<div id="formBox"> <!-- ******************* -->
+		<section id="formB"><!-- ******************* -->
 		<br>
-		Please tell me anything you would like to.
-		 <textarea></textarea>
-		 <input type="submit" value="submit">
-		</fieldset>
-		</form>
-		</div>
+		<form name="contact" action =# method = "post" onSubmit = "return validate();">
+		<h2>Please provide the following information</h2>
+		<table>
 
-	</section>
+		<tr>
+		<td>First Name:</td>
+		<td><input type="text" size = "30" name = "firstname"></td>
+		</tr>
+
+		<tr>
+		<td>Last Name:</td>
+		<td><input type="text" size = "30" name="lastname"></td>
+		</tr>
+		
+		<tr> 
+		<td>Email Address:</td>
+		<td><input type="text" size = "40" name="email"></td>
+		</tr>
+		
+		<tr>
+		<td>Phone:</td>
+		<td><input type="text" name="phone" maxlength="15" /></td>
+		</tr>
+		
+		<tr>
+		<td><br>Why are you contacting me?</td>
+		<td>
+		<br>
+		<input type="checkbox" name = "choice" value="Drink"/> : Personal question <br>
+		<input type="checkbox" name = "choice" value="Dinner" /> : Academic question<br>
+		<input type="checkbox" name = "choice" value="Rest" /> : General question<br>
+		<input type="checkbox" name = "choice" value="Anotherday" /> : Just saying Hi<br>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><br>What type of food do you like? </td>
+		<td><br>
+		<input type="radio" name = "Type" value="Type" /> : American <br>
+		<input type="radio" name = "Type" value="Type" /> : Asian <br>
+		<input type="radio" name = "Type" value="Type" /> : Mexican <br>
+		<input type="radio" name = "Type" value="Type" /> : All <br>
+		</td>
+		</tr>
+
+		<tr>
+		<td><br>What is your degree?</td>
+		<td><br>
+		<select name = "referral_code" size="1">
+		<option value="NULL">Please select an option</option>
+		<option value = "none">None</option>
+		<option value = "Highschool">High school diploma</option>
+		<option value = "B.S.">Bachelor's Degree or similar</option>
+		<option value = "M.S.">Master's Degree</option>
+		<option value = "Ph.D.">Ph.D</option>
+		</select></td>
+	 	</tr> 
+		  
+		<tr>
+		<td colspan = "2"><br/>Any comments:</td>
+		</tr>
+
+		<tr>
+		<td colspan = "2"> 
+		<textarea wrap="hard" rows="5" cols="45" ></textarea></td>
+		</tr>
+	            
+		<tr>     
+		<td colspan = "2">                        
+		<input type="submit" value="Submit" name = "submit"></td>                      
+		</tr>
+
+		<tr>
+		<td><input type= "reset" /><br></td>
+		<td><a href="mailto:deahanyu@umich.edu">Contact me</a></td>
+		</tr>
+
+		</table>
+		</form>
+		
+		</section>
+	</div>
 	<footer>
 		<div class="footerBox">
 	        <ul class="footerNav">
@@ -95,6 +146,6 @@ textarea {
 	        <small>Copyright 2016 Yu</small>
       	</div>
 	</footer>
-	</div>
+</div>
 </body>
 </html>
