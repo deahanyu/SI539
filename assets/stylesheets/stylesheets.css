@@ -441,6 +441,7 @@ MEDIA COMPUTER SIZE CVCV
 		}
 	#cvA{
 			display:table-cell;
+			width:512px;
 		}
 	#education{
 		display: none;
