@@ -8,27 +8,21 @@
 	<script>
 	function validate()
 		{
-		if (document.contact.firstname.value.length < 2 || document.contact.lastname.value.length < 2 ) 
 
-		{
-		alert("Please enter your whole name.");
+		if (document.contact.firstname.value.length < 2 || document.contact.lastname.value.length < 2 ){
+		window.alert("Please enter your whole name.");
+		return false;		
+		}
+		if (document.contact.email.value.length < 6 ){
+		window.alert("Please enter a valid email address.");
+		return false;		
+		}
+		if (document.contact.phone.value.length < 7 ){
+		window.alert("Please enter your phone number.");
 		return false;		
 		}
 
-		if (document.contact.email.value.length < 6 ) 
-		{
-
-		alert("Please enter a valid email address.");
-		return false;		
-		}
-
-		if (document.contact.phone.value.length < 7 ) 
-		{
-
-		alert("Please enter your phone number.");
-		return false;		
-		}
-		
+		window.alert("Thank you. It has been submitted.");
 		return true;
 	}
 	</script>
@@ -92,10 +86,10 @@
 		<tr>
 		<td><br>What type of food do you like? </td>
 		<td><br>
-		<input type="radio" name = "Type" value="Type" /> : American <br>
-		<input type="radio" name = "Type" value="Type" /> : Asian <br>
-		<input type="radio" name = "Type" value="Type" /> : Mexican <br>
-		<input type="radio" name = "Type" value="Type" /> : All <br>
+		<input type="radio" name="Type" value="Food"> : American <br>
+		<input type="radio" name="Type" value="Food"> : Asian <br>
+		<input type="radio" name="Type" value="Food"> : Mexican <br>
+		<input type="radio" name="Type" value="Food"> : All <br>
 		</td>
 		</tr>
 
