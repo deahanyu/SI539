@@ -60,6 +60,7 @@ For all pages header
 }
 #indexBody li#index a,#cvBody li#cv a,#inspirationBody li#inspiration a,#photoBody li#photo a,#formBody li#form a{ 	box-sizing: border-box;
     background-color: lightgrey; 
+    font-weight: bold;
 }
 
 
@@ -228,7 +229,7 @@ Media Queries          *****Only Phone*****
     	width: 100%;
 	}
 	.headerNav li a {
-    	padding: 11.5px 16px;
+    	padding: 11.5px 0px;
 	}
 	.dropdownBox:hover .headerNav {
 		box-sizing: border-box;
