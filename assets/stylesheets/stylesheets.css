@@ -206,14 +206,14 @@ Media Queries          *****Only Phone*****
 	    width:100%;
 	}
 	.dropdown {
-	    background-color: #B0C4DE;
-	  	border-radius: 0px 0px 15px 15px;
-	    padding: 12px;
+		background-color: #B0C4DE;
+		border-radius: 10px;
+	   padding: 6px;
 	    font-size: 1em;
 	    border: none;
 	    cursor: pointer;
 	    width:100%;
-	    opacity:0.5;
+		opacity:0.5;
 	    font-family:serif,Courier,Helvetica;
 	}
 	.headerNav {
@@ -227,9 +227,12 @@ Media Queries          *****Only Phone*****
 	}
 	.headerNav li {
     	width: 100%;
+
+
 	}
 	.headerNav li a {
     	padding: 11.5px 0px;
+    	
 	}
 	.dropdownBox:hover .headerNav {
 		box-sizing: border-box;
